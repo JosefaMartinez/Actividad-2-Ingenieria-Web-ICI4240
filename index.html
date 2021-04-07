@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title>Formulario</title>
+    <!--Estilos-->
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/estilos.css"/>
+    <!--JavaScript-->
+    <script src="js/app.js" type="text/javascript" charset="utf-8" async defer></script>
+</head>
+
+<body>
+
+    <div class="contenedorMensaje" id="mensaje"></div> 
+    
+        <!--Formulario-->
+        <!--Para utiliza el método POST y para el segundo atributo para que no aparezca un listado con valores anteriores-->
+        <form class="contenedorFormulario" id="formulario" method="POST" autocomplete="off">
+            <legend>Formulario de Contacto</legend>
+            <ul>
+                <!--Nombre-->
+                <li>
+                    <label for="nombre">Nombre</label>
+                    <input class="casillasDeTexto" type="text" id="nombre" required="true" minlength="3"/>
+                </li>
+
+                <!--Apellido-->
+                <li>
+                    <label for="apellido">Apellido</label>
+                    <input class="casillasDeTexto" type="text" id="apellido" required="true" minlength="3"/>
+                </li>
+
+                <li>
+                    <label for="rut">RUT</label><br/>
+                    <input class="casillasDeTexto" type="text" id="rut" required="true" placeholder="XXXXXXXXX" minlength="8" maxlength="9"/>
+                </li>
+                <!--Correo Electrónico-->
+                <li>
+                    <label for="correo">Correo Electrónico</label>
+                    <input class="casillasDeTexto" type="email" id="correo" required="true"/>
+                </li>
+
+                <!--Teléfono Móvil-->
+                <li>
+                    <label for="telefono">Teléfono Móvil</label>
+                    <input class="casillasDeTexto" type="number" id="telefono" required="true" maxlength="9" placeholder="9XXXXXXXX"/>
+                    
+                </li>
+
+                <!--Lenguajes de programación-->
+                <li>
+                   
+                    <label>Selecciona 1 o más lenguajes de programación de su interés</label><br/><br/>
+    
+                    <input type="checkbox"  value="Python" id="Python" name="lenguaje[]"/>
+                    <label for="Phyton">Phyton</label>
+                    <br/>
+
+                    <input type="checkbox" id="Java" name="lenguaje[]" value="Java"/>
+                    <label for=”Java”>Java</label><br/>
+
+                    <input type="checkbox" id="TypeScript" name="lenguaje[]" value="TypeScript"/>
+                    <label for="TypeScript">TypeScript</label><br/>
+
+                    <input type="checkbox" id="PHP" name="lenguaje[]" value="PHP"/>
+                    <label for="PHP">PHP</label><br/>
+
+                    <input  type="checkbox" id="C#" name="lenguaje[]" value="C#"/>
+                    <label for="C#">C#</label><br/>
+
+                    <input type="checkbox" id="C++" name="lenguaje[]" value="C++"/>
+                    <label for="C++">C++</label><br/><br/>
+                
+               
+                   <!-- 
+                    <label for="lenguajes"></label><br/>
+                    <select id="lenguajes" name="lenguajes" multiple="true">
+                        <option value="Phyton">Phyton</option>
+                        <option value="Java">Java</option>
+                        <option value="TypeScript">TypeScript</option>
+                        <option value="PHP">PHP</option>
+                        <option value="C#">C#</option>
+                        <option value="C++">C++</option>
+                    </select><br/><br/>
+                -->
+                </li>
+
+                <!--Conocimineto en programación-->
+                <li>
+                    <label for="conocimiento">¿Cuál es su nivel de conocimiento de programación?</label><br/><br/>
+                    
+                    <!--Recupera el valor out y se le asigna el valor actual de range. Como se encuentra dentro de input tipo range value se identifica-->
+                    <input type="range" id="conocimiento" min="-1" max="1" step="1" onchange="document.getElementById('outvol').value=value" list="tickmarks">
+                    
+                    <output id="outvol" name="outvol" for="vol">0</output>
+
+                    <!--para que aparezcan marcas-->
+                    <datalist id="tickmarks">
+                        <option value="-1"></option>
+                        <option value="0"></option>
+                        <option value="1"></option>
+                    </datalist>
+
+                    <br/><br/>
+                </li>  
+
+                <!--Años de experiencia-->
+                <li>
+                    <label>¿Cuántos años de experiencia tiene?</label>
+                    <br/><br/>
+                     
+                    <input type="radio" id="1" name="experiencia" value="1"/><i></i>
+                    <label for="1">1.</label>
+                    
+                    <input type="radio" id="2" name="experiencia" value="2"/>
+                    <label for="2">2.</label>
+                    
+                    <input type="radio" id="3" name="experiencia" value="3"/>
+                    <label for="3">3.</label>
+                    
+                    <input type="radio" id="4" name="experiencia" value="4"/>
+                    <label for="4">4.</label>
+                
+                    <input type="radio" id="5" name="experiencia" value="5"/>
+                    <label for="5">5.</label>
+                </li>
+                <br/><br/>
+
+                <!--Descripción-->
+                <li>
+                    <label for="descripcion">Descripción</label><br/><br/>
+                    <textarea maxlength="300" minlength="20" id="descripcion" required="true" rows="3" cols="30" placeholder="Descripción breve sobre usted"></textarea> 
+                </li>
+                <br/>
+            </ul>
+
+            <!--Botones-->
+            <button type="submit" id="Enviar">Enviar datos</button>
+            <button type="button" id="Limpiar">Limpiar datos</button>
+                    
+        </form>
+</body>
+</html>

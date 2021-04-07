@@ -1,0 +1,111 @@
+ul{
+    list-style-type:none;
+}
+
+body{
+    background: linear-gradient(#e9c46a,#e76f51);
+}
+
+.contenedorFormulario{
+    width: 45%;
+    margin: 9.2em auto;
+    padding: 1em;
+    background: rgba(0, 0,0,0.2);
+    border-radius: 10px;
+}
+
+.contenedorMensaje{
+    width: 45%;
+    margin: 12em auto;
+    padding: 2em;
+    background: rgba(0, 0,0,0.2);
+    border-radius: 10px;
+    text-align: center;
+    font-size: 150%;
+}
+#conocimiento{
+    margin-left:2%; 
+    margin-right:2%;
+}
+legend{
+    text-align: center;
+    font-size: 1.5em;
+    font-family: 'Trebuchet MS', sans-serif;
+    margin: 0 0 .5em;
+    font-style:italic;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: white;
+}
+
+label{
+    color: white;
+    letter-spacing: 2px;   
+}
+
+.casillasDeTexto{
+    width: 100%;
+    padding: 1% 0;
+    color: white;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    
+}
+.casillasDeRut{
+    width: 82%;
+    padding: 1% 0;
+    color: white;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    margin-top: 2%;
+    margin-bottom: 5%;  
+    margin-right: 2%;
+}
+
+.casillasDeVerificador{
+    width: 12%;
+    padding: 1% 0;
+    color: white;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    margin-left: 2%;
+    
+}
+
+span{
+    font-weight: bold;
+    font-size: 150%;
+}
+
+/*Estilo para los botones de enviar y limpiar*/
+button{
+    background-color: #f72585;
+    border: none;
+    letter-spacing: 2px;
+    margin: .5%;
+    position: relative;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    text-transform: uppercase;
+    padding: 1%;
+}
+
+/*Para que el textarea solo se pueda ampliar verticalmente*/
+textarea{
+    resize:vertical;
+    width: 100%;
+}
+
+#mensaje{
+    display: none;
+}
+
+
